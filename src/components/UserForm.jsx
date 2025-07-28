@@ -26,7 +26,7 @@ const UserForm = () => {
     isLoading(true);
     setTimeout(() => {
       setFormData(values);
-      setShowResult(true); // ✅ show result
+      setShowResult(true);
       isLoading(false);
       message.success("Registration Successful!");
     }, 3000);
