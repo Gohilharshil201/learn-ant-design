@@ -48,8 +48,10 @@ const AdvancedUserForm = () => {
               { required: true, message: "Username is required" },
               {
                 validator: (_, value) =>
-                  value && value.includes("admin")
-                    ? Promise.reject("Username cannot include 'admin'")
+                  (value && value.includes("admin")) || value.includes("Admin")
+                    ? Promise.reject(
+                        `Username cannot include 'admin': ${value}`
+                      )
                     : Promise.resolve(),
               },
             ]}
@@ -102,7 +104,9 @@ const AdvancedUserForm = () => {
                   rules={[{ required: false, message: "Select a platform" }]}
                 >
                   <Select placeholder="Platform">
-                    <Select.Option value="twitter/ X">Twitter / X</Select.Option>
+                    <Select.Option value="twitter/ X">
+                      Twitter / X
+                    </Select.Option>
                     <Select.Option value="linkedin">LinkedIn</Select.Option>
                     <Select.Option value="Instagram">Instagram</Select.Option>
                     <Select.Option value="dribbble">Dribbble</Select.Option>
