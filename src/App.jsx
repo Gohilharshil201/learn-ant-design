@@ -7,6 +7,7 @@ import { useState } from "react";
 import { ConfigProvider, theme as AntTheme } from "antd";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import UserNewForm from "./components/UserNewForm";
+import UserTable from "./components/UserTable";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -30,6 +31,7 @@ function App() {
           isCompact={isCompact}
           setIsCompact={setIsCompact}
         />
+        <UserTable />
         <UserNewForm />
         <Basic />
         <WelcomeCard />
