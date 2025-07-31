@@ -6,6 +6,8 @@ import AdvancedUserForm from "./components/AdvancedUserForm";
 import { useState } from "react";
 import { ConfigProvider, theme as AntTheme } from "antd";
 import ThemeSwitcher from "./components/ThemeSwitcher";
+import UserNewForm from "./components/UserNewForm";
+
 function App() {
   const [isDark, setIsDark] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
@@ -28,6 +30,7 @@ function App() {
           isCompact={isCompact}
           setIsCompact={setIsCompact}
         />
+        <UserNewForm />
         <Basic />
         <WelcomeCard />
         <UserGrid />
