@@ -8,6 +8,7 @@ import { ConfigProvider, theme as AntTheme } from "antd";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import UserNewForm from "./components/UserNewForm";
 import UserTable from "./components/UserTable";
+import SpinCompo from "./components/SpinCompo";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -31,6 +32,7 @@ function App() {
           isCompact={isCompact}
           setIsCompact={setIsCompact}
         />
+        <SpinCompo />
         <UserTable />
         <UserNewForm />
         <Basic />
